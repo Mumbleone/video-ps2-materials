@@ -13,6 +13,8 @@
 */
 
 // TODO: Write solution here
-
-
+func challenge(name: String, message: String = " is cool") -> String {
+    return  name + message
+}
+challenge(name: "Chase")
 //: [⇒ Next: 04 - Overloading](@next)
