@@ -48,7 +48,15 @@ for student in students {
 }
 
 
+students.forEach { student in
+    student.earnExtraCredit()
+}
 
+print(students)
+
+//let libraryBooks = students.map { (student) -> [String] in
+//    student.libraryBooks
+//}
 
 /*:
  ## Challenge 2 - compactMap
@@ -62,8 +70,10 @@ for student in students {
     classPets.append(pet)
   }
 }
-
-
+let pets = students.compactMap { student -> String? in
+    student.pet
+}
+print(pets)
 
 /*:
  ## Challenge 3 - flatMap
@@ -71,6 +81,8 @@ for student in students {
  Try using flatMap to flatten all of the books into a single String array.
 */
 
-
-
+let libraryBooks = students.flatMap { (student) -> [String] in
+    student.libraryBooks
+}
+print(libraryBooks)
 //: [⇒ Next: 09 - filter, reduce, & sort](@next)
